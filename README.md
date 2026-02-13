@@ -109,42 +109,6 @@ case 'cm-reset-rotation-all':
 
     break;
 ```
---------------------------------------------------------------------------------------
-### Based On
-
-The code follows the exact same pattern as the built-in **Sync Object Size** feature:
-
-**Sync Object Size** (original):
-```javascript
-editor.data.worldList.forEach(w=>{
-    let box = w.annotation.boxes.find(b=>b.obj_track_id == ...objTrackId);
-    if (box){
-        box.scale.x = currentBox.scale.x;  // copies size
-        box.scale.y = currentBox.scale.y;
-        box.scale.z = currentBox.scale.z;
-        w.annotation.setModified();
-        onBoxChangedInBatchMode(box);
-    }
-});
-```
-
-**Reset All Rotation** (new — same structure, different payload):
-```javascript
-editor.data.worldList.forEach(w=>{
-    let box = w.annotation.boxes.find(b=>b.obj_track_id == ...objTrackId);
-    if (box){
-        box.rotation.x = 0;  // resets tilt
-        box.rotation.y = 0;
-        w.annotation.setModified();
-        onBoxChangedInBatchMode(box);
-    }
-});
-```
-
-The only difference is **what changes inside the `if (box)` block** — everything else (iteration, object matching, save marking, UI update) is identical.
-
---------------------------------------------------------------------------------------
-
 
 ## License
 
