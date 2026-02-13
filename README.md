@@ -1,4 +1,4 @@
-# Reset All Rotation - Batch Roll & Pitch Reset for SUSTechPOINTS
+# Reset All Rotation - for SUSTechPOINTS
 
 > A context-menu action that resets roll (rotation.x) and pitch (rotation.y) to zero across **all frames** for a tracked object, without affecting heading (rotation.z).
 
