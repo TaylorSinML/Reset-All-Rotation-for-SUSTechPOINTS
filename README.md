@@ -1,4 +1,4 @@
-# Reset All Rotation — Batch Roll & Pitch Reset for SUSTechPOINTS
+# Reset All Rotation - Batch Roll & Pitch Reset for SUSTechPOINTS
 
 > A context-menu action that resets roll (rotation.x) and pitch (rotation.y) to zero across **all frames** for a tracked object, without affecting heading (rotation.z).
 
@@ -8,7 +8,7 @@
 
 When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and pitch) due to sensor noise, road slope, or imprecise manual adjustments. The existing **Reset Roll & Pitch** button works per-view and only on the current frame. **Reset All Rotation** solves this by resetting tilt on **every frame at once** with a single right-click menu action.
 
-![Reset All Rotation](demo.gif)
+![1](https://github.com/user-attachments/assets/fcda91ce-683b-4e07-87a8-e9cdcdc1b239)
 
 ### How It Works
 
