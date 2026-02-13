@@ -8,7 +8,8 @@
 
 When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and pitch) due to sensor noise, road slope, or imprecise manual adjustments. The existing **Reset Roll & Pitch** button works per-view and only on the current frame. **Reset All Rotation** solves this by resetting tilt on **every frame at once** with a single right-click menu action.
 
-![1](https://github.com/user-attachments/assets/fcda91ce-683b-4e07-87a8-e9cdcdc1b239)
+![123](https://github.com/user-attachments/assets/9ed31ad2-7db9-422b-805f-c03f3d8a0791)
+
 
 ### How It Works
 
@@ -17,14 +18,6 @@ When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and 
 3. Sets `rotation.x = 0` and `rotation.y = 0` on each frame
 4. Heading (`rotation.z`) is **not touched** — the object keeps its direction
 5. All modified frames are marked as changed for saving
-
-### What Gets Reset
-
-| Axis | Name | Reset? | Why |
-| --- | --- | --- | --- |
-| `rotation.x` | Pitch (tilt forward/back) | ✅ Yes → 0 | Usually noise from road slope |
-| `rotation.y` | Roll (tilt left/right) | ✅ Yes → 0 | Usually noise from sensor |
-| `rotation.z` | Heading (direction) | ❌ Not touched | Intentionally set by annotator |
 
 ### Based On
 
@@ -66,9 +59,10 @@ The only difference is **what changes inside the `if (box)` block** — everythi
 ### Modified Files
 
 ```
-public/js/editor.js     — Handler for single-frame context menu
-public/js/box_editor.js — Handler for batch-mode context menu
-index.html              — UI: menu item in 3 context menus
+1. index.html              — UI: menu item in 3 context menus
+2. public/js/editor.js     — Handler for single-frame context menu
+3. public/js/box_editor.js — Handler for batch-mode context menu
+
 ```
 
 ---
@@ -157,19 +151,6 @@ case 'cm-reset-rotation-all':
 
     break;
 ```
-
----
-
-## Why Two Handlers?
-
-SUSTechPOINTS has two editing modes with separate event handlers:
-
-| Mode | File | Object reference | When used |
-| --- | --- | --- | --- |
-| Single-frame view | `editor.js` | `this.selected_box` | Right-click on object in main 3D view |
-| Batch mode (multi-frame) | `box_editor.js` | `this.firingBoxEditor.target` | Right-click on object in batch editor |
-
-Both handlers do the same thing — they just access the current object differently.
 
 ## License
 
