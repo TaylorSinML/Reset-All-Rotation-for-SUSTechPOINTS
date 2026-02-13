@@ -9,6 +9,7 @@
 When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and pitch) due to sensor noise, road slope, or imprecise manual adjustments. The existing **Reset Roll & Pitch** button works per-view and only on the current frame. **Reset All Rotation** solves this by resetting tilt on **every frame at once** with a single right-click menu action.
 
 ![123](https://github.com/user-attachments/assets/9ed31ad2-7db9-422b-805f-c03f3d8a0791)
+![123 (1)](https://github.com/user-attachments/assets/acb5c90e-07b0-4090-bef4-9a65011f6aac)
 <img width="386" height="297" alt="1" src="https://github.com/user-attachments/assets/431f8e91-fb21-4e86-87cb-b823a9a65821" />
 
 
