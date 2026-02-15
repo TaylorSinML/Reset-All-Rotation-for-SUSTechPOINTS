@@ -1,9 +1,5 @@
 # Reset All Rotation - for SUSTechPOINTS
 
-> A context-menu action that resets roll (rotation.x) and pitch (rotation.y) to zero across **all frames** for a tracked object, without affecting heading (rotation.z).
-
----
-
 ## Overview
 
 When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and pitch) due to sensor noise, road slope, or imprecise manual adjustments. The existing **Reset Roll & Pitch** button works per-view and only on the current frame.
