@@ -8,7 +8,7 @@
 
 When annotating 3D LiDAR data, objects often accumulate unwanted tilt (roll and pitch) due to sensor noise, road slope, or imprecise manual adjustments. The existing **Reset Roll & Pitch** button works per-view and only on the current frame.
 
-![123 (1)](https://github.com/user-attachments/assets/acb5c90e-07b0-4090-bef4-9a65011f6aac)
+![123](https://github.com/user-attachments/assets/37e05a72-a542-42fb-9fd2-ade3b6f2949f)
 <img width="386" height="297" alt="1" src="https://github.com/user-attachments/assets/431f8e91-fb21-4e86-87cb-b823a9a65821" />
 
 
